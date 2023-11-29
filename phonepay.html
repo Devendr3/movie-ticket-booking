@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhonePay Payment</title>
+  <link rel="stylesheet" href="phonepay.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Confirm Seat</h1>
+
+
+        <form action="#" method="post" onsubmit="showReceipt(); return false;">
+      <label for="phonepay-number">Phone Number:</label>
+      <input type="tel" id="phonepay-number" placeholder="Enter your phone number">
+      
+      <label for="Seatno">Selected SeatNo's:</label>
+      <input type="number" id="Seatno" placeholder="Enter Selected SeatNo's">
+
+      <label for="payment-amount">Payment Amount:</label>
+      <input type="number" id="payment-amount" placeholder="Enter payment amount">
+
+      <button type="submit" class="payment-button">Initiate PhonePay Payment</button>
+    
+    </form>
+
+    <div class="receipt" id="receipt">
+        <div class="amount-info" id="amountInfo"></div>
+        <div class="seat-info" id="seatInfo"></div>
+        
+    </div>
+</div>
+
+<script>
+    function showReceipt() {
+        var amount = document.getElementById('payment-amount').value;
+        var seatNumbers = document.getElementById('Seatno').value;
+
+        document.getElementById('amountInfo').innerText = 'Amount: $' + amount;
+        document.getElementById('seatInfo').innerText = 'Seat Numbers: ' + seatNumbers;
+
+        document.getElementById('receipt').style.display = 'block';
+
+  
+    }
+  
+</script>
+<div class="container">
+  <a href="index.html" alt="home">Home</a>
+</div>
+  </div>
+ 
+</body>
+</html>

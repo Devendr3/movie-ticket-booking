@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .payment-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .receipt {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            background-color: #eaffeb;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .amount-info {
+            color: #4caf50;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .seat-info {
+            color: #1e88e5;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-form">
+        <h2>Movie Booking Payment</h2>
+        <form action="#" method="post" onsubmit="showReceipt(); return false;">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" required>
+
+            <label for="seatNumbers">Seat Numbers:</label>
+            <input type="text" id="seatNumbers" name="seatNumbers" required>
+
+            <button type="submit">Pay Now</button>
+        </form>
+
+        <div class="receipt" id="receipt">
+            <div class="amount-info" id="amountInfo"></div>
+            <div class="seat-info" id="seatInfo"></div>
+        </div>
+    </div>
+
+    <script>
+        function showReceipt() {
+            var amount = document.getElementById('amount').value;
+            var seatNumbers = document.getElementById('seatNumbers').value;
+
+            document.getElementById('amountInfo').innerText = 'Amount: $' + amount;
+            document.getElementById('seatInfo').innerText = 'Seat Numbers: ' + seatNumbers;
+
+            document.getElementById('receipt').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

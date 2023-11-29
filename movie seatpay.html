@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="movie seat.html"> 
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="post" onsubmit="showReceipt(); return false;">
+
+    <label for="seatCount">Enter the number of seats:</label>
+    <input type="number" id="seatCount">
+    <button onclick="calculateAmount()">Calculate Amount</button>
+    <p id="result">Total Amount: $0</p>
+    
+</form>
+
+<button type="submit" class="payment-button">Initiate PhonePay Payment</button>
+    
+
+    <div class="receipt" id="receipt">
+        <div class="amount-info" id="amountInfo"></div>
+        <div class="seat-info" id="seatInfo"></div>
+        
+    </div>
+
+    <script>
+        function calculateAmount() {
+    var seatCount = document.getElementById("seatCount").value;
+    var pricePerSeat = 100; // Set your price per seat here
+    var totalAmount = seatCount * pricePerSeat;
+
+    document.getElementById("result").innerText = "Total Amount: $" + totalAmount;
+}
+
+
+    </script>
+
+    <script>
+        function showReceipt() {
+            var amount = document.getElementById('result').value;
+            var seatNumbers = document.getElementById('seatCount').value;
+    
+            document.getElementById('amountInfo').innerText = 'Amount: $' + amount;
+            document.getElementById('seatInfo').innerText = 'Seat Numbers: ' + seatNumbers;
+    
+            document.getElementById('receipt').style.display = 'block';
+    
+      
+        }
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+/* body {
+    font-family: sans-serif;
+  }
+  
+  .container {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .payment-methods {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  
+  .payment-method {
+    padding: 40px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: skyblue;
+  }
+  
+  .payment-details {
+    display: none;
+  }
+
+#phonepay{
+    background-image:url(phonepe.jpeg);
+
+
+} */
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    padding-top: 100px;
+  }
+  
+  .container {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:skyblue;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .payment-methods {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .payment-method {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    text-align: right;
+  
+    
+  }
+  
+  .payment-details {
+    display: none;
+  }
+  
+  .payment-amount {
+    margin-bottom: 20px;
+  }
+  
+  .payment-button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #phonepay, #googlepay ,#card-payment{
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+  
+.payment-methods .payment-method a{
+    text-decoration: none;
+    color: black;
+    transition: .3s ease;
+
+}
+
+.payment-method:hover{
+    background-color:orangered;
+    
+}
+.payment-method a{
+  text-align: 500px;
+  font-display: none;
+}
+
+#phonepay{
+  background-image: url(phonepe.jpeg);
+  width: 105px;
+  height: 120px;
+}
+
+.payment{
+  padding-top:92px;
+}
+
+.image{
+  width: 200px;
+  height: 100px;
+  padding-top:10px;
+}
+
+.imagee{
+  width: 100px;
+  height: 50px;
+  padding-top:10px;
+}
